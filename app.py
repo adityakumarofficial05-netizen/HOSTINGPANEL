@@ -72,6 +72,8 @@ def db():
     )
     """)
 
+    return con
+
     con.execute("""
     CREATE TABLE IF NOT EXISTS projects(
         id TEXT PRIMARY KEY,
@@ -156,11 +158,13 @@ def auto_install(pyfile,logfile):
 
 def save_project(file, username):
     pid = str(uuid.uuid4())[:8]
+
     folder = PROJECT_DIR / username / pid
     folder.mkdir(parents=True, exist_ok=True)
 
     name = (file.filename or "bot.py").replace("/", "_").replace("\\", "_")
     saved = folder / name
+
     file.save(saved)
 
     data = {
@@ -182,7 +186,6 @@ def save_project(file, username):
 
         saved.unlink(missing_ok=True)
 
-        # requirements skip (Render safe)
         req = folder / "requirements.txt"
         if req.exists():
             print("requirements.txt found but ignored (Render safe mode)")
@@ -201,9 +204,6 @@ def save_project(file, username):
 
     data["main_name"] = main.name
 
-    # ❌ REMOVED auto_install (this was crashing Render)
-    # auto_install(main, folder/"host.log")
-
     con = db()
     con.execute(
         "INSERT INTO projects(id,username,name,path,main_file,status,autostart,created_at) VALUES(?,?,?,?,?,?,?,?)",
@@ -212,8 +212,8 @@ def save_project(file, username):
     con.commit()
 
     firebase_put(f"hosting/projects/{pid}", data)
-    return pid
 
+    return data
 
 def get_project(pid):
     return db().execute("SELECT * FROM projects WHERE id=?", (pid,)).fetchone()
@@ -364,19 +364,32 @@ def delete_user_data(username):
 def delete_user(username):
     if not is_admin(): return "Forbidden",403
     delete_user_data(username); return redirect(url_for("dashboard"))
-@app.route("/upload",methods=["POST"])
-@login_required
-
 @app.route("/upload", methods=["POST"])
 @login_required
 def upload():
-    
+    try:
+        f = request.files.get("file")
 
-@app.route("/upload", methods=["POST"])
-@login_required
-def upload():
-    
+        if not f:
+            return redirect(url_for("dashboard"))
 
+        print("UPLOAD STARTED:", f.filename)
+
+        save_project(f, current_user())
+
+        print("UPLOAD SUCCESS")
+
+        return redirect(url_for("dashboard"))
+
+    except Exception as e:
+        print("UPLOAD ERROR:", e)
+        traceback.print_exc()
+        return redirect(url_for("dashboard"))
+
+    except Exception as e:
+        print("UPLOAD ERROR:", e)
+        traceback.print_exc()
+        return redirect(url_for("dashboard"))
 @app.route("/upload", methods=["POST"])
 @login_required
 def upload():
@@ -400,27 +413,13 @@ def upload():
         return redirect(url_for("dashboard"))
 
 
-@app.route("/project/<pid>/stop")
-@login_required
-def stop(pid):
-    r = get_project(pid)
-    if r and owner_ok(r):
-        stop_project(r, manual=True)
-    return redirect(url_for("dashboard"))
-
-
 @app.route("/project/<pid>/restart")
 @login_required
 def restart(pid):
     r = get_project(pid)
     if r and owner_ok(r):
-        stop_project(r, manual=False)
+        stop_project(r, manual=True)
         run_project(r)
-    return redirect(url_for("dashboard"))
-def autostart_on(pid):
-    r=get_project(pid)
-    if r and owner_ok(r):
-        con=db(); con.execute("UPDATE projects SET autostart=1 WHERE id=?",(pid,)); con.commit(); firebase_patch(f"hosting/projects/{pid}",{"autostart":1}); run_project(r)
     return redirect(url_for("dashboard"))
 @app.route("/project/<pid>/autostart-off")
 @login_required
