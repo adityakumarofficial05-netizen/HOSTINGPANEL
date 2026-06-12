@@ -1,4 +1,4 @@
-
+import traceback
 import os, sys, ast, json, uuid, zipfile, shutil, sqlite3, subprocess, urllib.request, threading, time, base64
 from pathlib import Path
 from datetime import datetime, date, timedelta
@@ -11,11 +11,13 @@ ADMIN_API_KEY=os.getenv("ADMIN_API_KEY","NEXA")
 FIREBASE_DATABASE_URL=os.getenv("FIREBASE_DATABASE_URL","https://deathmods8088-default-rtdb.firebaseio.com").rstrip("/")
 FIREBASE_ENABLED=os.getenv("FIREBASE_ENABLED","1")=="1"
 
-BASE_DIR=Path(__file__).resolve().parent
-DATA_DIR=BASE_DIR/"data"
-PROJECT_DIR=DATA_DIR/"projects"
-DB_PATH=DATA_DIR/"hosting.db"
-DATA_DIR.mkdir(exist_ok=True); PROJECT_DIR.mkdir(exist_ok=True)
+BASE_DIR = Path(__file__).resolve().parent
+DATA_DIR = BASE_DIR / "data"
+PROJECT_DIR = DATA_DIR / "projects"
+DB_PATH = DATA_DIR / "hosting.db"
+
+DATA_DIR.mkdir(exist_ok=True)
+PROJECT_DIR.mkdir(exist_ok=True)
 
 app=Flask(__name__)
 app.secret_key=APP_SECRET
@@ -55,12 +57,35 @@ def b64file(path): return base64.b64encode(Path(path).read_bytes()).decode()
 def writeb64(data,path): Path(path).parent.mkdir(parents=True,exist_ok=True); Path(path).write_bytes(base64.b64decode(data.encode()))
 
 def db():
-    con=sqlite3.connect(DB_PATH); con.row_factory=sqlite3.Row
-    con.execute("CREATE TABLE IF NOT EXISTS users(id INTEGER PRIMARY KEY AUTOINCREMENT, username TEXT UNIQUE, password TEXT, expiry_date TEXT, created_at TEXT)")
-    con.execute("CREATE TABLE IF NOT EXISTS projects(id TEXT PRIMARY KEY, username TEXT, name TEXT, path TEXT, main_file TEXT, status TEXT DEFAULT 'stopped', autostart INTEGER DEFAULT 1, created_at TEXT)")
-    try: con.execute("ALTER TABLE projects ADD COLUMN autostart INTEGER DEFAULT 1")
-    except sqlite3.OperationalError: pass
-    con.commit(); return con
+    con = sqlite3.connect(DB_PATH, timeout=10, check_same_thread=False)
+    con.row_factory = sqlite3.Row
+
+    con.execute("PRAGMA journal_mode=WAL")
+
+    con.execute("""
+    CREATE TABLE IF NOT EXISTS users(
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        username TEXT UNIQUE,
+        password TEXT,
+        expiry_date TEXT,
+        created_at TEXT
+    )
+    """)
+
+    con.execute("""
+    CREATE TABLE IF NOT EXISTS projects(
+        id TEXT PRIMARY KEY,
+        username TEXT,
+        name TEXT,
+        path TEXT,
+        main_file TEXT,
+        status TEXT DEFAULT 'stopped',
+        autostart INTEGER DEFAULT 1,
+        created_at TEXT
+    )
+    """)
+
+    return con
 
 def find_main(folder):
     for name in ["main.py","bot.py","app.py","index.py"]:
@@ -129,29 +154,78 @@ def auto_install(pyfile,logfile):
             except Exception: pass
         log.write("[HOST] Auto install done.\n")
 
-def save_project(file,username):
-    pid=str(uuid.uuid4())[:8]; folder=PROJECT_DIR/username/pid; folder.mkdir(parents=True,exist_ok=True)
-    name=(file.filename or "bot.py").replace("/","_").replace("\\","_"); saved=folder/name; file.save(saved)
-    data={"id":pid,"username":username,"name":name,"status":"stopped","autostart":1,"created_at":datetime.now().isoformat(timespec="seconds")}
+def save_project(file, username):
+    pid = str(uuid.uuid4())[:8]
+    folder = PROJECT_DIR / username / pid
+    folder.mkdir(parents=True, exist_ok=True)
+
+    name = (file.filename or "bot.py").replace("/", "_").replace("\\", "_")
+    saved = folder / name
+    file.save(saved)
+
+    data = {
+        "id": pid,
+        "username": username,
+        "name": name,
+        "status": "stopped",
+        "autostart": 1,
+        "created_at": datetime.now().isoformat(timespec="seconds")
+    }
+
+    main = None
+
     if name.lower().endswith(".zip"):
-        data["zip_b64"]=b64file(saved)
-        with zipfile.ZipFile(saved) as z: z.extractall(folder)
+        data["zip_b64"] = b64file(saved)
+
+        with zipfile.ZipFile(saved) as z:
+            z.extractall(folder)
+
         saved.unlink(missing_ok=True)
-        req=folder/"requirements.txt"
+
+        # requirements skip (Render safe)
+        req = folder / "requirements.txt"
         if req.exists():
-            with open(folder/"host.log","a",encoding="utf-8") as log: subprocess.run([sys.executable,"-m","pip","install","-r",str(req)],stdout=log,stderr=log,timeout=300)
-        main=find_main(folder)
+            print("requirements.txt found but ignored (Render safe mode)")
+
+        main = find_main(folder)
+
     elif name.lower().endswith(".py"):
-        main=saved; data["file_b64"]=b64file(saved)
-    else: raise ValueError("Only .py or .zip allowed")
-    if not main: raise ValueError("No Python file found")
-    data["main_name"]=main.name; auto_install(main,folder/"host.log")
-    con=db(); con.execute("INSERT INTO projects(id,username,name,path,main_file,status,autostart,created_at) VALUES(?,?,?,?,?,?,?,?)",(pid,username,name,str(folder),str(main),"stopped",1,data["created_at"])); con.commit()
-    firebase_put(f"hosting/projects/{pid}",data); return pid
-def get_project(pid): return db().execute("SELECT * FROM projects WHERE id=?",(pid,)).fetchone()
+        main = saved
+        data["file_b64"] = b64file(saved)
+
+    else:
+        raise ValueError("Only .py or .zip allowed")
+
+    if not main:
+        raise ValueError("No Python file found")
+
+    data["main_name"] = main.name
+
+    # ❌ REMOVED auto_install (this was crashing Render)
+    # auto_install(main, folder/"host.log")
+
+    con = db()
+    con.execute(
+        "INSERT INTO projects(id,username,name,path,main_file,status,autostart,created_at) VALUES(?,?,?,?,?,?,?,?)",
+        (pid, username, name, str(folder), str(main), "stopped", 1, data["created_at"])
+    )
+    con.commit()
+
+    firebase_put(f"hosting/projects/{pid}", data)
+    return pid
+
+
+def get_project(pid):
+    return db().execute("SELECT * FROM projects WHERE id=?", (pid,)).fetchone()
+
+
 def restore_project_if_missing(row):
-    if Path(row["main_file"]).exists(): return True
-    sync_projects_from_firebase(); row2=get_project(row["id"])
+    if Path(row["main_file"]).exists():
+        return True
+
+    sync_projects_from_firebase()
+    row2 = get_project(row["id"])
+
     return bool(row2 and Path(row2["main_file"]).exists())
 def run_project(row):
     pid=row["id"]
@@ -228,12 +302,34 @@ def home(): return redirect(url_for("dashboard" if current_user() else "login"))
 @app.route("/login",methods=["GET","POST"])
 def login():
     if request.method=="POST":
-        sync_users_from_firebase(); u=request.form.get("username","").strip(); p=request.form.get("password","").strip()
+        sync_users_from_firebase()
+        u=request.form.get("username","").strip()
+        p=request.form.get("password","").strip()
+
+        print("LOGIN ATTEMPT:", u)
+
         if u==ADMIN_USERNAME and p==ADMIN_PASSWORD:
-            session.clear(); session["username"]=u; session["role"]="admin"; return redirect(url_for("dashboard"))
+            print("ADMIN LOGIN SUCCESS")
+            session.clear()
+            session["username"]=u
+            session["role"]="admin"
+            return redirect(url_for("dashboard"))
+
         row=db().execute("SELECT * FROM users WHERE username=? AND password=?",(u,p)).fetchone()
+
+        print("DB ROW:", row)
+
+        if row:
+            print("EXPIRY DATE:", row["expiry_date"])
+
         if row and not expired(row["expiry_date"]):
-            session.clear(); session["username"]=u; session["role"]="user"; return redirect(url_for("dashboard"))
+            print("USER LOGIN SUCCESS")
+            session.clear()
+            session["username"]=u
+            session["role"]="user"
+            return redirect(url_for("dashboard"))
+
+        print("LOGIN FAILED")
     return page("<div class='card login'><div class='bigIcon'>🔥</div><h1>Bot Hosting 24/7</h1><p class='muted'>Firebase saved users + one-time upload backup + watchdog restart.</p><form method='post'><input name='username' placeholder='👤 Username' required><input name='password' type='password' placeholder='🔒 Password' required><button>⚡ Login Panel</button></form><a class='btn pink' href='http://t.me/@DI_HOSTING_BOT'>💬 DM TO BUY</a></div>")
 @app.route("/logout")
 def logout(): session.clear(); return redirect(url_for("login"))
@@ -270,30 +366,57 @@ def delete_user(username):
     delete_user_data(username); return redirect(url_for("dashboard"))
 @app.route("/upload",methods=["POST"])
 @login_required
-def upload():
-    f=request.files.get("file")
-    if f: save_project(f,current_user())
-    return redirect(url_for("dashboard"))
-@app.route("/project/<pid>/start")
+
+@app.route("/upload", methods=["POST"])
 @login_required
-def start(pid):
-    r=get_project(pid)
-    if r and owner_ok(r): run_project(r)
-    return redirect(url_for("dashboard"))
+def upload():
+    
+
+@app.route("/upload", methods=["POST"])
+@login_required
+def upload():
+    
+
+@app.route("/upload", methods=["POST"])
+@login_required
+def upload():
+    try:
+        f = request.files.get("file")
+
+        if not f:
+            return redirect(url_for("dashboard"))
+
+        print("UPLOAD STARTED:", f.filename)
+
+        save_project(f, current_user())
+
+        print("UPLOAD SUCCESS")
+
+        return redirect(url_for("dashboard"))
+
+    except Exception as e:
+        print("UPLOAD ERROR:", e)
+        traceback.print_exc()
+        return redirect(url_for("dashboard"))
+
+
 @app.route("/project/<pid>/stop")
 @login_required
 def stop(pid):
-    r=get_project(pid)
-    if r and owner_ok(r): stop_project(r,manual=True)
+    r = get_project(pid)
+    if r and owner_ok(r):
+        stop_project(r, manual=True)
     return redirect(url_for("dashboard"))
+
+
 @app.route("/project/<pid>/restart")
 @login_required
 def restart(pid):
-    r=get_project(pid)
-    if r and owner_ok(r): stop_project(r,manual=False); run_project(r)
+    r = get_project(pid)
+    if r and owner_ok(r):
+        stop_project(r, manual=False)
+        run_project(r)
     return redirect(url_for("dashboard"))
-@app.route("/project/<pid>/autostart-on")
-@login_required
 def autostart_on(pid):
     r=get_project(pid)
     if r and owner_ok(r):
