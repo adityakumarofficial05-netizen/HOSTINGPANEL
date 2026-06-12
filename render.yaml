@@ -1,0 +1,22 @@
+services:
+  - type: web
+    name: tgbothosting-firebase-24x7
+    env: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: python app.py
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.9
+      - key: APP_SECRET
+        generateValue: true
+      - key: ADMIN_USERNAME
+        value: ADMIN
+      - key: ADMIN_PASSWORD
+        value: "12345"
+      - key: ADMIN_API_KEY
+        value: NEXA
+      - key: FIREBASE_ENABLED
+        value: "1"
+      - key: FIREBASE_DATABASE_URL
+        value: https://deathmods8088-default-rtdb.firebaseio.com

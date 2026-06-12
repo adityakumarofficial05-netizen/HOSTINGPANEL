@@ -1,0 +1,81 @@
+{
+    "users": {
+        "8475663053": {
+            "id": 8475663053,
+            "name": "【𝗥𝗘𝗔𝗟乛🇸‌🇭‌🇦‌🇩‌🇴‌🇼‌〆 [ZONE]",
+            "username": "BOT_CLONER",
+            "joined": 1780241424
+        },
+        "6480827931": {
+            "id": 6480827931,
+            "name": "NEXRO MODZ",
+            "username": "NEXROMODZSUPPORT",
+            "joined": 1780240978
+        },
+        "7607314151": {
+            "id": 7607314151,
+            "name": "—͟͞͞ Ꮢᴏʜɪᴛ ⸙͎",
+            "username": "Rohit_BhaiTOP1",
+            "joined": 1780240759
+        },
+        "7834151535": {
+            "id": 7834151535,
+            "name": "CHINTU",
+            "username": "CHINTU_MODS",
+            "joined": 1780240804
+        },
+        "5988303454": {
+            "id": 5988303454,
+            "name": "𓆩—͟͟͞͞𝐃𝐄𝐄𝐏 ➤ •° ִֶ [ 𝙉𝘼𝙐𝙂𝙃𝙏𝙔 ]",
+            "username": "",
+            "joined": 1780240836
+        },
+        "7666180642": {
+            "id": 7666180642,
+            "name": "𝐑𝐀𝐍𝐎 𝐗 𝐇𝐑 𝐌𝐎𝐃",
+            "username": "RANOMOD",
+            "joined": 1780240909
+        },
+        "8392572460": {
+            "id": 8392572460,
+            "name": "SATYAM X OFC",
+            "username": "SATYAM_X_OFC",
+            "joined": 1780240961
+        },
+        "7201271497": {
+            "id": 7201271497,
+            "name": "𓆩 BRUTAL BHAIYA 𓆪",
+            "username": "brutalbhaiyaog",
+            "joined": 1780241302
+        },
+        "8224757249": {
+            "id": 8224757249,
+            "name": "𓋰 𓆩𝐓ᴇᴄʜɴᴏ𓆪 ˣ [𝗧𝗢𝗣 𝗩𝗜𝗣 𝗦𝗘𝗟𝗟𝗘𝗥]",
+            "username": "TECHNOXTAMIL",
+            "joined": 1780241446
+        }
+    },
+    "balances": {
+        "8224757249": 390
+    },
+    "sales": 10,
+    "payments": [
+        {
+            "user_id": "8224757249",
+            "plan": "day",
+            "amount": 10,
+            "method": "wallet",
+            "time": 1780241446
+        }
+    ],
+    "accounts": [
+        {
+            "user_id": "8224757249",
+            "username": "MODXFF",
+            "password": "MODXFF1",
+            "plan": "day",
+            "expiry": "2026-06-01",
+            "time": 1780241469
+        }
+    ]
+}

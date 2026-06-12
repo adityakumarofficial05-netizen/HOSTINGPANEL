@@ -1,0 +1,1559 @@
+
+[WATCHDOG] Auto restart at 2026-05-31 15:13:01.695958
+
+[HOST] Auto install checking...
+[AUTO-INSTALL] pip install requests
+Collecting requests
+  Downloading requests-2.34.2-py3-none-any.whl.metadata (4.8 kB)
+Collecting charset_normalizer<4,>=2 (from requests)
+  Downloading charset_normalizer-3.4.7-cp314-cp314-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (40 kB)
+Requirement already satisfied: idna<4,>=2.5 in ./.venv/lib/python3.14/site-packages (from requests) (3.17)
+Collecting urllib3<3,>=1.26 (from requests)
+  Downloading urllib3-2.7.0-py3-none-any.whl.metadata (6.9 kB)
+Requirement already satisfied: certifi>=2023.5.7 in ./.venv/lib/python3.14/site-packages (from requests) (2026.5.20)
+Downloading requests-2.34.2-py3-none-any.whl (73 kB)
+Downloading charset_normalizer-3.4.7-cp314-cp314-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (215 kB)
+Downloading urllib3-2.7.0-py3-none-any.whl (131 kB)
+Installing collected packages: urllib3, charset_normalizer, requests
+
+Successfully installed charset_normalizer-3.4.7 requests-2.34.2 urllib3-2.7.0
+
+[notice] A new release of pip is available: 25.3 -> 26.1.1
+[notice] To update, run: pip install --upgrade pip
+[AUTO-INSTALL] pip install pyTelegramBotAPI
+Collecting pyTelegramBotAPI
+  Downloading pytelegrambotapi-4.33.0-py3-none-any.whl.metadata (48 kB)
+Requirement already satisfied: requests in ./.venv/lib/python3.14/site-packages (from pyTelegramBotAPI) (2.34.2)
+Requirement already satisfied: charset_normalizer<4,>=2 in ./.venv/lib/python3.14/site-packages (from requests->pyTelegramBotAPI) (3.4.7)
+Requirement already satisfied: idna<4,>=2.5 in ./.venv/lib/python3.14/site-packages (from requests->pyTelegramBotAPI) (3.17)
+Requirement already satisfied: urllib3<3,>=1.26 in ./.venv/lib/python3.14/site-packages (from requests->pyTelegramBotAPI) (2.7.0)
+Requirement already satisfied: certifi>=2023.5.7 in ./.venv/lib/python3.14/site-packages (from requests->pyTelegramBotAPI) (2026.5.20)
+Downloading pytelegrambotapi-4.33.0-py3-none-any.whl (308 kB)
+Installing collected packages: pyTelegramBotAPI
+Successfully installed pyTelegramBotAPI-4.33.0
+
+[notice] A new release of pip is available: 25.3 -> 26.1.1
+[notice] To update, run: pip install --upgrade pip
+[HOST] Auto install done.
+
+[HOST] Starting bot.py at 2026-05-31 15:13:20.789718
+2026-05-31 15:17:28,044 | INFO | QR API: {
+    "status": "success",
+    "data": {
+        "order_id": "FAMPAY202605312047270BF8F19C",
+        "qr_url": "https:\/\/fampay.anujbots.xyz\/qr_codes\/FAMPAY202605312047270BF8F19C.png",
+        "upi_id": "madeshkumar51@fam",
+        "amount": "10",
+        "created_at_ist": "31-05-2026 20:47:27",
+        "expires_at_ist": "31-05-2026 20:52:27"
+    },
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:17:31,628 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY202605312047270BF8F19C",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:17:34,918 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY202605312047270BF8F19C",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:17:38,307 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY202605312047270BF8F19C",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:17:38,953 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY202605312047270BF8F19C",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:17:40,432 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY202605312047270BF8F19C",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:17:41,903 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY202605312047270BF8F19C",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:17:42,868 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY202605312047270BF8F19C",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:17:44,263 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY202605312047270BF8F19C",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:17:44,835 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY202605312047270BF8F19C",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:17:44,944 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY202605312047270BF8F19C",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:17:46,565 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY202605312047270BF8F19C",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:17:51,565 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY202605312047270BF8F19C",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:17:55,884 | INFO | QR API: {
+    "status": "success",
+    "data": {
+        "order_id": "FAMPAY20260531204755E65F51DF",
+        "qr_url": "https:\/\/fampay.anujbots.xyz\/qr_codes\/FAMPAY20260531204755E65F51DF.png",
+        "upi_id": "madeshkumar51@fam",
+        "amount": "40",
+        "created_at_ist": "31-05-2026 20:47:55",
+        "expires_at_ist": "31-05-2026 20:52:55"
+    },
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:17:58,212 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY20260531204755E65F51DF",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:17:58,691 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY20260531204755E65F51DF",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:18:05,221 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY20260531204755E65F51DF",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:18:06,242 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY20260531204755E65F51DF",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:18:11,689 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY20260531204755E65F51DF",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:18:13,065 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY20260531204755E65F51DF",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:18:18,520 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY20260531204755E65F51DF",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:18:19,695 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY20260531204755E65F51DF",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:18:25,688 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY20260531204755E65F51DF",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:18:26,560 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY20260531204755E65F51DF",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:18:32,265 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY20260531204755E65F51DF",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:18:33,336 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY20260531204755E65F51DF",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:18:38,778 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY20260531204755E65F51DF",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:18:39,805 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY20260531204755E65F51DF",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:18:45,771 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY20260531204755E65F51DF",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:18:46,330 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY20260531204755E65F51DF",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:18:52,273 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY20260531204755E65F51DF",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:18:53,281 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY20260531204755E65F51DF",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:18:59,248 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY20260531204755E65F51DF",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:19:00,100 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY20260531204755E65F51DF",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:19:05,696 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY20260531204755E65F51DF",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:19:06,662 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY20260531204755E65F51DF",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:19:12,439 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY20260531204755E65F51DF",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:19:13,380 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY20260531204755E65F51DF",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:19:19,056 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY20260531204755E65F51DF",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:19:19,855 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY20260531204755E65F51DF",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:19:25,472 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY20260531204755E65F51DF",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:19:26,265 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY20260531204755E65F51DF",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:19:31,912 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY20260531204755E65F51DF",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:19:33,214 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY20260531204755E65F51DF",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:19:38,379 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY20260531204755E65F51DF",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:19:39,781 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY20260531204755E65F51DF",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:19:45,123 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY20260531204755E65F51DF",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:19:46,190 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY20260531204755E65F51DF",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:19:51,531 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY20260531204755E65F51DF",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:19:52,726 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY20260531204755E65F51DF",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:19:57,969 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY20260531204755E65F51DF",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:19:59,243 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY20260531204755E65F51DF",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:20:04,436 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY20260531204755E65F51DF",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:20:06,257 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY20260531204755E65F51DF",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:20:10,888 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY20260531204755E65F51DF",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:20:12,748 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY20260531204755E65F51DF",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:20:17,794 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY20260531204755E65F51DF",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:20:19,248 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY20260531204755E65F51DF",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:20:24,284 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY20260531204755E65F51DF",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:20:26,124 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY20260531204755E65F51DF",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:20:30,859 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY20260531204755E65F51DF",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:20:32,656 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY20260531204755E65F51DF",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:20:37,646 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY20260531204755E65F51DF",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:20:39,147 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY20260531204755E65F51DF",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:20:45,702 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY20260531204755E65F51DF",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:20:46,462 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY20260531204755E65F51DF",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:20:52,267 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY20260531204755E65F51DF",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:20:53,251 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY20260531204755E65F51DF",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:20:59,186 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY20260531204755E65F51DF",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:20:59,715 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY20260531204755E65F51DF",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:21:06,175 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY20260531204755E65F51DF",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:21:06,345 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY20260531204755E65F51DF",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:21:12,734 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY20260531204755E65F51DF",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:21:12,835 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY20260531204755E65F51DF",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:21:19,571 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY20260531204755E65F51DF",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:21:20,051 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY20260531204755E65F51DF",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:21:26,524 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY20260531204755E65F51DF",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:21:27,046 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY20260531204755E65F51DF",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:21:33,426 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY20260531204755E65F51DF",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:21:33,565 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY20260531204755E65F51DF",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:21:40,057 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY20260531204755E65F51DF",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:21:40,310 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY20260531204755E65F51DF",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:21:40,770 | INFO | QR API: {
+    "status": "success",
+    "data": {
+        "order_id": "FAMPAY2026053120513969C476E1",
+        "qr_url": "https:\/\/fampay.anujbots.xyz\/qr_codes\/FAMPAY2026053120513969C476E1.png",
+        "upi_id": "madeshkumar51@fam",
+        "amount": "40",
+        "created_at_ist": "31-05-2026 20:51:40",
+        "expires_at_ist": "31-05-2026 20:56:40"
+    },
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:21:43,423 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY2026053120513969C476E1",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:21:46,979 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY20260531204755E65F51DF",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:21:47,130 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY20260531204755E65F51DF",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:21:49,809 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY2026053120513969C476E1",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:21:51,152 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY2026053120513969C476E1",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:21:53,480 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY20260531204755E65F51DF",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:21:53,539 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY20260531204755E65F51DF",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:21:56,678 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY2026053120513969C476E1",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:21:59,997 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY20260531204755E65F51DF",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:22:00,027 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY20260531204755E65F51DF",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:22:03,199 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY2026053120513969C476E1",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:22:06,530 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY20260531204755E65F51DF",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:22:06,698 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY20260531204755E65F51DF",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:22:09,827 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY2026053120513969C476E1",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:22:13,573 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY20260531204755E65F51DF",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:22:13,744 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY20260531204755E65F51DF",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:22:16,854 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY2026053120513969C476E1",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:22:16,866 | INFO | QR API: {
+    "status": "success",
+    "data": {
+        "order_id": "FAMPAY20260531205216E2A40868",
+        "qr_url": "https:\/\/fampay.anujbots.xyz\/qr_codes\/FAMPAY20260531205216E2A40868.png",
+        "upi_id": "madeshkumar51@fam",
+        "amount": "40",
+        "created_at_ist": "31-05-2026 20:52:16",
+        "expires_at_ist": "31-05-2026 20:57:16"
+    },
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:22:20,571 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY20260531204755E65F51DF",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:22:20,585 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY20260531204755E65F51DF",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:22:21,108 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY20260531205216E2A40868",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:22:23,312 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY2026053120513969C476E1",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:22:26,209 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY20260531205216E2A40868",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:22:27,213 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY20260531204755E65F51DF",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:22:27,689 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY20260531204755E65F51DF",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:22:27,899 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY20260531205216E2A40868",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:22:30,311 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY2026053120513969C476E1",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:22:31,505 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY20260531205216E2A40868",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:22:34,410 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY20260531205216E2A40868",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:22:34,642 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY20260531205216E2A40868",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:22:34,903 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY20260531205216E2A40868",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:22:36,899 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY20260531205216E2A40868",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:22:37,303 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY2026053120513969C476E1",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:22:37,394 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY20260531205216E2A40868",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:22:39,300 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY20260531205216E2A40868",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:22:39,939 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY20260531205216E2A40868",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:22:41,658 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY20260531205216E2A40868",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:22:41,758 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY20260531205216E2A40868",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:22:42,833 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY20260531205216E2A40868",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:22:43,960 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY2026053120513969C476E1",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:22:44,021 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY20260531205216E2A40868",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:22:48,538 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY20260531205216E2A40868",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:22:51,229 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY2026053120513969C476E1",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:22:55,156 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY20260531205216E2A40868",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:23:00,061 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY2026053120513969C476E1",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:23:01,803 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY20260531205216E2A40868",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:23:06,490 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY2026053120513969C476E1",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:23:08,717 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY20260531205216E2A40868",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:23:13,291 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY2026053120513969C476E1",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:23:15,179 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY20260531205216E2A40868",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:23:21,506 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY2026053120513969C476E1",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:23:21,542 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY20260531205216E2A40868",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:23:28,075 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY2026053120513969C476E1",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:23:28,162 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY20260531205216E2A40868",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:23:34,612 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY2026053120513969C476E1",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:23:36,372 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY20260531205216E2A40868",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:23:40,973 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY2026053120513969C476E1",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:23:43,003 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY20260531205216E2A40868",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:23:47,353 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY2026053120513969C476E1",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:23:49,404 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY20260531205216E2A40868",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:23:53,860 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY2026053120513969C476E1",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:23:56,260 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY20260531205216E2A40868",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:24:00,427 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY2026053120513969C476E1",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:24:02,703 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY20260531205216E2A40868",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:24:06,912 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY2026053120513969C476E1",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:24:09,342 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY20260531205216E2A40868",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:24:13,372 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY2026053120513969C476E1",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:24:19,773 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY2026053120513969C476E1",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:24:20,716 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY20260531205216E2A40868",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:24:26,129 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY2026053120513969C476E1",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:24:27,050 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY20260531205216E2A40868",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:24:32,558 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY2026053120513969C476E1",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:24:33,541 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY20260531205216E2A40868",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:24:38,944 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY2026053120513969C476E1",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:24:39,983 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY20260531205216E2A40868",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:24:45,851 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY2026053120513969C476E1",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:24:46,445 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY20260531205216E2A40868",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:24:52,460 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY2026053120513969C476E1",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:24:53,246 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY20260531205216E2A40868",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:24:58,863 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY2026053120513969C476E1",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:25:00,253 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY20260531205216E2A40868",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:25:05,375 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY2026053120513969C476E1",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:25:06,728 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY20260531205216E2A40868",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:25:12,031 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY2026053120513969C476E1",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:25:13,552 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY20260531205216E2A40868",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:25:18,684 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY2026053120513969C476E1",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:25:20,202 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY20260531205216E2A40868",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:25:25,751 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY2026053120513969C476E1",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:25:26,899 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY20260531205216E2A40868",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:25:32,468 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY2026053120513969C476E1",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:25:33,417 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY20260531205216E2A40868",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:25:38,981 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY2026053120513969C476E1",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:25:40,236 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY20260531205216E2A40868",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:25:45,876 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY2026053120513969C476E1",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:25:46,864 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY20260531205216E2A40868",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:25:52,645 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY2026053120513969C476E1",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:25:53,289 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY20260531205216E2A40868",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:25:59,179 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY2026053120513969C476E1",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:25:59,700 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY20260531205216E2A40868",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:26:05,555 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY2026053120513969C476E1",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:26:06,170 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY20260531205216E2A40868",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:26:12,329 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY2026053120513969C476E1",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:26:13,304 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY20260531205216E2A40868",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:26:18,993 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY2026053120513969C476E1",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:26:19,638 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY20260531205216E2A40868",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:26:25,465 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY2026053120513969C476E1",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:26:26,088 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY20260531205216E2A40868",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:26:31,919 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY2026053120513969C476E1",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:26:32,448 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY20260531205216E2A40868",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:26:38,410 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY2026053120513969C476E1",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:26:39,364 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY20260531205216E2A40868",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:26:46,176 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY20260531205216E2A40868",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:26:52,673 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY20260531205216E2A40868",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:27:04,204 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY20260531205216E2A40868",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:27:10,742 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY20260531205216E2A40868",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:27:17,530 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY20260531205216E2A40868",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:28:12,306 | INFO | QR API: {
+    "status": "success",
+    "data": {
+        "order_id": "FAMPAY20260531205811F0C1ADCD",
+        "qr_url": "https:\/\/fampay.anujbots.xyz\/qr_codes\/FAMPAY20260531205811F0C1ADCD.png",
+        "upi_id": "madeshkumar51@fam",
+        "amount": "40",
+        "created_at_ist": "31-05-2026 20:58:12",
+        "expires_at_ist": "31-05-2026 21:03:12"
+    },
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:28:15,386 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY20260531205811F0C1ADCD",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:28:19,963 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY20260531205811F0C1ADCD",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:28:21,825 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY20260531205811F0C1ADCD",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:28:24,491 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY20260531205811F0C1ADCD",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:28:28,210 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY20260531205811F0C1ADCD",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:28:34,739 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY20260531205811F0C1ADCD",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:28:41,248 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY20260531205811F0C1ADCD",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:28:47,970 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY20260531205811F0C1ADCD",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:28:55,100 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY20260531205811F0C1ADCD",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:29:01,728 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY20260531205811F0C1ADCD",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:29:08,165 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY20260531205811F0C1ADCD",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:29:14,732 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY20260531205811F0C1ADCD",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:29:21,631 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY20260531205811F0C1ADCD",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:29:28,148 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY20260531205811F0C1ADCD",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:29:34,623 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY20260531205811F0C1ADCD",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:29:41,144 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY20260531205811F0C1ADCD",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:29:47,816 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY20260531205811F0C1ADCD",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:29:54,112 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY20260531205811F0C1ADCD",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:30:00,648 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY20260531205811F0C1ADCD",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:30:07,348 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY20260531205811F0C1ADCD",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:30:13,736 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY20260531205811F0C1ADCD",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:30:20,566 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY20260531205811F0C1ADCD",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:30:27,268 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY20260531205811F0C1ADCD",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:30:34,630 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY20260531205811F0C1ADCD",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:30:41,640 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY20260531205811F0C1ADCD",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:30:48,176 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY20260531205811F0C1ADCD",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:30:54,561 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY20260531205811F0C1ADCD",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:31:03,213 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY20260531205811F0C1ADCD",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:31:09,755 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY20260531205811F0C1ADCD",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:31:09,856 | INFO | CREATE API: {"expiry_date":"2026-06-01","message":"User created","ok":true,"password":"MODXFF1","status":true,"username":"MODXFF"}
+
+2026-05-31 15:31:16,305 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY20260531205811F0C1ADCD",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:31:22,777 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY20260531205811F0C1ADCD",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:31:29,282 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY20260531205811F0C1ADCD",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:31:35,617 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY20260531205811F0C1ADCD",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:31:42,476 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY20260531205811F0C1ADCD",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:31:48,999 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY20260531205811F0C1ADCD",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:31:55,426 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY20260531205811F0C1ADCD",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:32:01,899 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY20260531205811F0C1ADCD",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:32:08,262 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY20260531205811F0C1ADCD",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:32:16,115 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY20260531205811F0C1ADCD",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:32:22,814 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY20260531205811F0C1ADCD",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:32:29,314 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY20260531205811F0C1ADCD",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:32:35,654 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY20260531205811F0C1ADCD",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:32:42,079 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY20260531205811F0C1ADCD",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:32:48,455 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY20260531205811F0C1ADCD",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:32:54,833 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY20260531205811F0C1ADCD",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:33:01,286 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY20260531205811F0C1ADCD",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:33:07,960 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY20260531205811F0C1ADCD",
+    "dev": "@ANUJxCODER"
+}
+2026-05-31 15:33:15,680 | INFO | VERIFY API: {
+    "status": "error",
+    "message": "Transaction failed - Payment not received",
+    "order_id": "FAMPAY20260531205811F0C1ADCD",
+    "dev": "@ANUJxCODER"
+}

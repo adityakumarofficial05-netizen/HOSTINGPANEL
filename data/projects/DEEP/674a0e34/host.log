@@ -1,0 +1,36 @@
+
+[WATCHDOG] Auto restart at 2026-05-31 15:12:37.580253
+
+[HOST] Auto install checking...
+[AUTO-INSTALL] pip install python-telegram-bot
+Collecting python-telegram-bot
+  Downloading python_telegram_bot-22.7-py3-none-any.whl.metadata (17 kB)
+Collecting httpcore>=1.0.9 (from python-telegram-bot)
+  Downloading httpcore-1.0.9-py3-none-any.whl.metadata (21 kB)
+Collecting httpx<0.29,>=0.27 (from python-telegram-bot)
+  Downloading httpx-0.28.1-py3-none-any.whl.metadata (7.1 kB)
+Collecting anyio (from httpx<0.29,>=0.27->python-telegram-bot)
+  Downloading anyio-4.13.0-py3-none-any.whl.metadata (4.5 kB)
+Collecting certifi (from httpx<0.29,>=0.27->python-telegram-bot)
+  Downloading certifi-2026.5.20-py3-none-any.whl.metadata (2.5 kB)
+Collecting idna (from httpx<0.29,>=0.27->python-telegram-bot)
+  Downloading idna-3.17-py3-none-any.whl.metadata (6.4 kB)
+Collecting h11>=0.16 (from httpcore>=1.0.9->python-telegram-bot)
+  Downloading h11-0.16.0-py3-none-any.whl.metadata (8.3 kB)
+Downloading python_telegram_bot-22.7-py3-none-any.whl (745 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 745.4/745.4 kB 26.0 MB/s  0:00:00
+Downloading httpx-0.28.1-py3-none-any.whl (73 kB)
+Downloading httpcore-1.0.9-py3-none-any.whl (78 kB)
+Downloading h11-0.16.0-py3-none-any.whl (37 kB)
+Downloading anyio-4.13.0-py3-none-any.whl (114 kB)
+Downloading idna-3.17-py3-none-any.whl (65 kB)
+Downloading certifi-2026.5.20-py3-none-any.whl (134 kB)
+Installing collected packages: idna, h11, certifi, httpcore, anyio, httpx, python-telegram-bot
+
+Successfully installed anyio-4.13.0 certifi-2026.5.20 h11-0.16.0 httpcore-1.0.9 httpx-0.28.1 idna-3.17 python-telegram-bot-22.7
+
+[notice] A new release of pip is available: 25.3 -> 26.1.1
+[notice] To update, run: pip install --upgrade pip
+[HOST] Auto install done.
+
+[HOST] Starting SABKAAPAPA.py at 2026-05-31 15:13:01.482819
